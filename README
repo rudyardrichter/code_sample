@@ -1,0 +1,35 @@
+### Notes
+
+The code in this sample implements three basic algorithms in machine learning:
+dimensional reduction via both PCA and Isomap, and the simple linear classifier
+implementation of the perceptron.
+
+I have written and tested the code using Python 3.5.2---if the default version of
+Python being used is not 3, the scripts should be called using `python3`
+instead of just `python`.
+
+
+### Dimensional Reduction
+
+To run the PCA and Isomap code:
+
+    python reduction.py 3Ddata.txt pca_results iso_results 10
+
+This saves the resulting plots in `pca_results.pdf` and `iso_results_10.pdf`,
+where Isomap uses 10-nearest neighbors to compute the k-NN graph. The data from
+`3Ddata.txt` are due to Professor Risi Kondor, instructor for Machine Learning
+(CMSC 25400); it is an educational example which highlights the contrasting
+behaviors of PCA and Isomap.
+
+
+### Classification
+
+To run the perceptron code:
+
+    python perceptron.py train35.digits train35.labels test35.digits test35.predictions 5
+
+This saves the perceptron's predictions for the digits in `test35.digits` in the
+file `test35.predictions`, where the perceptron is using batch method training
+and runs through the training set 5 times. (The training and test data are from
+the MNIST database of handwritten digits---each row of the data describes the
+pixels of a single image.)
